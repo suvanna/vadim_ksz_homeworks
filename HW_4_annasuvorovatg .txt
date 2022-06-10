@@ -1,0 +1,94 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug Reports
+- SQL
+- Charles
+- Mobile testing
+
+
+git clone https://github.com/suvanna/ksz_git_HW2.git
+cd  ksz_git_HW2
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch BugReports
+git branch MobileTesting
+git branch SQL
+
+2. Запушить все ветки на внешний репозиторий
+git push origin Postman
+git push origin Jmeter
+git push origin CheckLists
+git push origin BugReports
+git push origin MobileTesting
+git push origin SQL
+
+
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+nano bugreport.xml
+Taulia Bug Report:
+    Bug ID: 1
+       Severity: High
+       Priority: Medium
+       Bug name: Enumeration of search pages: link to page 5 is missing
+       Assigned to: Vasya Pupkin
+       Status: New
+       Environment: Firefox 100.0.2 (64-bit), Mac OS Mojave
+       Location: https://taulia.portnov.com
+       Actual Result: Enumeration of search pages: link to page 5 is missing.
+       Expected_result: Enumeration should display all pages numbers
+    Bug ID: 2
+       Severity: Medium
+       Priority: Medium
+       Bug name: Sorting order violation in Amount Column: $22,409.37 should go below $22,376.00
+       Assigned to: Vasya Pupkin
+       Status: New
+       Environment: Firefox 100.0.2 (64-bit), Mac OS Mojave
+       Location: https://taulia.portnov.com
+       Actual Result:Amount Column: $22,409.37 goes above    $22,376.00
+       Expected_result: Amount Column: $22,409.37 should go below $22,376.00
+[Ctrl+O]
+[Ctrl+X]
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git add .
+git commit -m "added simple bugreport to BugReports branch"
+git push --set-upstream origin BugReports
+
+5. Вмержить ветку Bug Reports в Main
+git checkout main
+git merge BugReports
+
+6. Запушить main на внешний репозиторий.
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+checkout Checklists
+nano login_page_checklist.txt
+1) Verify if a user can log in with a valid username and password.
+2) Verify if a user cannot log in with an invalid username or password. Check permutation and combinations of this.
+3) Verify the ‘Keep me Sign In’ option. If this check box is selected, then the user should not get logged out even after exiting the app.
+4) Verify if this check box is not selected by default.
+5) If the user has signed up with Facebook or social media, verify that the user can log in with those credentials or not.
+6) Verify the Forgot password functionality.
+7) Verify if the login page fits the mobile screen. The user should not have to scroll the screen.
+[Ctrl+O]
+[Ctrl+X]
+
+8. Запушить структуру на внешний репозиторий
+git add .
+git commit -m "added a general login form test checklist"
+git push --set-upstream origin CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+Performed necessary actions on github.com site, got the following result:
+
+ Pull request successfully merged and closed
+ You’re all set—the CheckLists branch can be safely deleted.
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+in terminal:
+git checkout main & git pull
