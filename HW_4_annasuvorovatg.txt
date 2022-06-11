@@ -26,8 +26,11 @@ git push origin BugReports
 git push origin MobileTesting
 git push origin SQL
 
-
+or
+git push --all origin
+c
 3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+heckout BugReports
 nano bugreport.xml
 Taulia Bug Report:
     Bug ID: 1
