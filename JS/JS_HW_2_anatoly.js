@@ -8,10 +8,10 @@
 
 //below is how we pow numbers to learn interations:
 let numbertoPow = Number;
-let Pow = Number;
-function customPow (numbertoPow, Pow){
-let powResult= 1;
-for (i=1; i<=Pow; i++)
+let toPow = Number;
+function customPow (numbertoPow, toPow){
+//let powResult= 1;
+for (i=1; i<=toPow; i++)
 {
     console.log ( numbertoPow ** i);
     
@@ -124,7 +124,7 @@ function isPalindrom(word)
         
         if (word.length % 2 === 0)
         {
-            let wordPart1 = word.slice (0, word.length / 2  );
+            let wordPart1 = word.slice (0, word.length / 2 );
             let wordPart2 = word.slice (word.length / 2, word.length);
             let wordPart2Reverted = ''
             // this is to learn iterations:
