@@ -8,16 +8,17 @@
 
 //below is how we pow numbers to learn interations:
 let numbertoPow = Number;
-function customPow (numbertoPow ){
+let Pow = Number;
+function customPow (numbertoPow, Pow){
 let powResult= 1;
-for (i=0; i<=9; i++)
+for (i=1; i<=Pow; i++)
 {
-    powResult =  2 * powResult;
+    console.log ( numbertoPow ** i);
+    
 }
-return powResult;
 }
 console.log('Task 1*');
-console.log('10 power of 2 equals: ' + customPow (2));
+customPow (2, 10);
 console.log('========= \n');
 
 
